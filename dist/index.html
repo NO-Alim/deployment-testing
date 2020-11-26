@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Web Deployment</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
@@ -13,5 +14,21 @@
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta tempora placeat a! Expedita sint nam omnis ad iste ullam dolorem fugiat nesciunt rem, odio illo similique velit quibusdam commodi illum aspernatur cum maxime inventore dolore officiis laboriosam delectus enim consectetur quos? Ea dignissimos error, quam possimus fuga in harum molestias?</p>
         <p>Lorem ipsum dolor sit amet.</p>
     </div>
+    <div class="map">
+
+    </div>
+    <script>
+        function initMap(){
+            var options = {
+                zoom: 8,
+                center: {lat: 42.3601,lng:-71.0589}
+            }
+            var map = new google.maps.Map(document.querySelector('.map'), options);
+        }
+    </script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBucm0--4VG-fsZUtd6Ut_aY0cD7HebNPQ&callback=initMap&libraries=&v=weekly"
+      defer
+    ></script>
 </body>
 </html>
